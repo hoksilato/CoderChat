@@ -1,12 +1,12 @@
-# Homework 2 - *Name of App*
+# Homework 2 - *CoderChat*
 
-**Name of your app** is a Ruby on Rails blog application that allows users to send messages to each other that can only be read once.
+**CoderChat** is a Ruby on Rails blog application that allows users to send messages to each other that can only be read once.
 
-Submitted by: **Your Name Here**
+Submitted by: **Cang Ta**
 
 Time spent: **X** hours
 
-URL: **Insert your Heroku URL here**
+URL: **enigmatic-basin-9048.herokuapp.com**
 
 ## User Stories
 
