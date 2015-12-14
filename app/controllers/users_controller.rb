@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :require_user, only: [:index]
+  before_action :redirect_to_messages_if_signed_in, only: [:new, :create]
+
   def index
   end
 
@@ -9,14 +12,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to @user, notice: 'You signed up successfully.' }
-        format.json { render :show, status: :created, location: @user }
-      else
-        format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    if @user.save
+      sign_in(@user)
+      redirect_to messages_path, flash: {success: "Welcome <strong>#{current_user.name}</strong>!"}
+    else
+      render :new
     end
   end
 
