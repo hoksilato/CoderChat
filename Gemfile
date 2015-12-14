@@ -70,6 +70,9 @@ gem "font-awesome-rails"
 # Ionicons
 gem 'ionicons-rails'
 
+# Email validator
+gem 'email_validator'
+
 gem 'httparty'
 
 source 'https://rails-assets.org' do
