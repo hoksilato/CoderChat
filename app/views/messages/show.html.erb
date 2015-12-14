@@ -39,18 +39,15 @@
                         <!-- Portfolio Control Buttons [ END ] -->
 
                         <div id="projects" class="projet-items clearfix">
-                        <% @messages.each do |message| %>
-                          <% if message.read %>
-                          <div class="bd-callout bd-callout-info">
-                          <% else %>
-                          <div class="bd-callout bd-callout-danger">
-                          <% end %>
-                            <h4><%= message.sender.name %></h4>
-                            <p>
-                              <%= message.body %>
-                              <%= link_to 'Read', message, class: "btn btn-info-outline pull-right btn-sm" %>
-                            </p>
-                          </div>
+                        <% if @message %>
+                            <div class="col-md-6" style="text-align: left">
+                              <h6>Sender: <b><%= @message.sender.name %></b></h6>
+                              <h6>Sent at: <b><%= @message.created_at.strftime("%A, %B %d, %H:%M") %></b></h6>
+                              <hr>
+                              <p>
+                                <%= @message.body %>
+                              </p>
+                            </div>
                         <% end %>
                         </div>
                     </div>

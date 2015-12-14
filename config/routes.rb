@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :users, only: [:new, :create, :index]
   resources :sessions, only: [:new, :create, :destroy]
-  resources :messages, only: [:index, :new, :create]
+  resources :messages, only: [:index, :new, :create, :show]
   resources :friends, only: [:index, :new, :create]
 
   get 'welcome/index'
@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   get 'logout' => 'sessions#destroy'
   post 'users/create', as: 'create_user'
+  get 'sents/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

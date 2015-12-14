@@ -29,8 +29,8 @@
                     <div class="row">
                         <div class="project-controls">
                           <ul class="messages-nav">
-                            <li><%= link_to 'Incoming messages', messages_path, class: 'active' %></li>
-                            <li><%= link_to 'Sent messages', sents_index_path %></li>
+                            <li><%= link_to 'Incoming messages', messages_path %></li>
+                            <li><%= link_to 'Sent messages', sents_index_path, class: 'active' %></li>
                             <li><%= link_to 'New message', new_message_path %></li>
                             <li><%= link_to 'Add friends', users_path %></li>
                           </ul>
@@ -42,15 +42,21 @@
                         <% @messages.each do |message| %>
                           <% if message.read %>
                           <div class="bd-callout bd-callout-info">
-                          <% else %>
-                          <div class="bd-callout bd-callout-danger">
-                          <% end %>
                             <h4><%= message.sender.name %></h4>
                             <p>
                               <%= message.body %>
-                              <%= link_to 'Read', message, class: "btn btn-info-outline pull-right btn-sm" %>
+                              <br><small class="text-muted pull-right">Read at <em><%= message.read_at.strftime("%A, %B %d, %H:%M") %></em></small>
                             </p>
                           </div>
+                          <% else %>
+                          <div class="bd-callout bd-callout-danger">
+                            <h4><%= message.sender.name %></h4>
+                            <p>
+                              <%= message.body %>
+                              <br><small class="text-muted pull-right"><em>This message is not read</em></small>
+                            </p>
+                          </div>
+                          <% end %>
                         <% end %>
                         </div>
                     </div>

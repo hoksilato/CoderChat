@@ -1,8 +1,21 @@
 class MessagesController < ApplicationController
-  before_action :require_user, only: [:index, :new, :create]
+  before_action :require_user, only: [:index, :new, :create, :show]
 
   def index
     @messages = Message.where(recipient: current_user).order(created_at: :desc)
+  end
+
+  def show
+    @message = Message.find_by_id(params[:id])
+    if @message.nil?
+      redirect_to messages_path, flash: {error: "Message not found"}
+    elsif @message.recipient != current_user
+      redirect_to messages_path, flash: {error: "You only can view your received messages"}
+    elsif @message.read
+      flash.now[:alert] = "The message was read"
+    else
+      @message.mark_read
+    end
   end
 
   def new

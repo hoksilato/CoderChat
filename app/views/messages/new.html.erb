@@ -26,7 +26,7 @@
                         <div class="project-controls">
                           <ul class="messages-nav">
                             <li><%= link_to 'Incoming messages', messages_path %></li>
-                            <li><a href="">Sent messages</a></li>
+                            <li><%= link_to 'Sent messages', sents_index_path %></li>
                             <li><%= link_to 'New message', new_message_path, class: 'active' %></li>
                             <li><%= link_to 'Add friends', users_path %></li>
                           </ul>
@@ -39,7 +39,7 @@
 
                             <div class="col-md-6 col-sm-6">
                               <div class="form-group">
-                                <%= f.collection_select :recipient, current_user.friends, :id, :name, prompt: false, class: 'form-control' %>
+                                <%= f.input :recipient, collection: current_user.friends, :label_method => :name, :value_method => :id, prompt: false, class: 'form-control' %>
                               </div>
                             </div>
 

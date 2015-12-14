@@ -20,9 +20,19 @@
 
       <div class="clearfix full-height">
         <h2 class="small-heading">MAKE FRIENDS</h2>
+
         <div class="row">
           <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
             <div class="row">
+              <div class="project-controls">
+                <ul class="messages-nav">
+                  <li><%= link_to 'Incoming messages', messages_path %></li>
+                  <li><%= link_to 'Sent messages', sents_index_path %></li>
+                  <li><%= link_to 'New message', new_message_path %></li>
+                  <li><%= link_to 'Add friends', users_path, class: 'active' %></li>
+                </ul>
+              </div>
+
               <% User.all.each do |user| %>
                 <% if !current_user.friends.include?(user) && current_user != user %>
                   <%= form_tag friends_path, method: "post", class: 'form-inline' do %>

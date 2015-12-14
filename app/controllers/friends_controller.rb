@@ -2,9 +2,9 @@ class FriendsController < ApplicationController
   before_action :require_user, only: [:create]
 
   def create
-    user = User.find(params[:id])
+    user = User.find_by_id(params[:id])
     if !user
-      flash.now[:error] = "User not found"
+      redirect_to users_path, flash: {error: "User not found"}
     else
       friend = Friend.new
 
