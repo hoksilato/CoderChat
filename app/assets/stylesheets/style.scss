@@ -1,5 +1,5 @@
 /*
---------------------------------------------------------* 
+--------------------------------------------------------*
 
 [Boots4, Main Stylesheet ]
 
@@ -99,13 +99,13 @@
 }
 .loader span:nth-child(1){
 background:#2ecc71;
- 
+
 }
 .loader span:nth-child(2){
 left:22px;
 background:#9b59b6;
     animation-delay: .2s;
- 
+
 }
 .loader span:nth-child(3){
 top:22px;
@@ -282,7 +282,7 @@ body {
     color: #4b4b4b;
     display: block;
     font-family: 'Playfair Display', serif;
-    padding-left: 50px;
+    padding-left: 40px;
     margin-bottom: -15px;
     font-size: 35px;
     font-weight: 700;
@@ -303,7 +303,7 @@ body {
 .intro-content .slogan-text {
     font-weight: 400;
     font-size: 25px;
-    padding-left: 21px;
+    padding-left: 190px;
 }
 
 .social-media {
@@ -586,7 +586,7 @@ body {
 }
 
 .video iframe {
-    width: 560px; 
+    width: 560px;
     height: 315px;
 }
 
@@ -597,25 +597,25 @@ body {
 .about-us-desc p:last-child {
     -webkit-column-count: 2;/* Chrome, Safari, Opera */
     -moz-column-count: 2;/* Firefox */
-    column-count: 2; 
-    -webkit-column-gap: 30px;/* Chrome, Safari, Opera */ 
-    -moz-column-gap: 30px;/* Firefox */ 
+    column-count: 2;
+    -webkit-column-gap: 30px;/* Chrome, Safari, Opera */
+    -moz-column-gap: 30px;/* Firefox */
     column-gap: 30px;
     font-size: 14px;
 }
 
-/* First, define the common wrapper elements 
+/* First, define the common wrapper elements
    Padding-top is for the fixed height header of the embedded content */
 
 .youtubeWrapper {
     /*position: relative;*/
-    padding-top: 30px; 
-    height: 0; 
+    padding-top: 30px;
+    height: 0;
     /*overflow: hidden;*/
     padding-bottom: 56.25%;
 }
-    
-/* For each content source, set the IFRAME to be top left and occupy 100% of width and height of the containing DIV wrapper */    
+
+/* For each content source, set the IFRAME to be top left and occupy 100% of width and height of the containing DIV wrapper */
 .youtubeWrapper iframe,
 .youtubeWrapper object,
 .youtubeWrapper embed {
@@ -854,7 +854,7 @@ body {
     margin-left: -29px;
     margin-top: -29px;
 }
-.flip-container 
+.flip-container
 {
     -webkit-perspective: 1000;
     -moz-perspective: 1000;
@@ -862,7 +862,7 @@ body {
     perspective: 1000;
 }
 
-.flip-container:hover .flipper,  
+.flip-container:hover .flipper,
 .flip-container.hover .flipper
 {
     -webkit-transform: rotateY(180deg);
@@ -871,19 +871,19 @@ body {
     transform: rotateY(180deg);
 }
 
-.flip-container, .front, .back 
+.flip-container, .front, .back
 {
     height: 300px;
 }
 
-.flipper 
+.flipper
 {
     -webkit-transition: 0.6s;
     -webkit-transform-style: preserve-3d;
 
     -moz-transition: 0.6s;
     -moz-transform-style: preserve-3d;
-  
+
     -o-transition: 0.6s;
     -o-transform-style: preserve-3d;
 
@@ -896,7 +896,7 @@ body {
 {
     margin: 15px 10px;
 }
-.front, .back 
+.front, .back
 {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -907,18 +907,18 @@ body {
     left: 0;
 }
 
-.front 
+.front
 {
     z-index: 2;
     /*background-color: rgba(92, 145, 216, 0.27);*/
     background-color: #f4f4f4;
     width: 100%;
 }
-.front h5, .back p 
+.front h5, .back p
 {
     margin-top: 20px;
 }
-.front h5 
+.front h5
 {
     line-height: 31px;
     font-weight: 400;
@@ -928,7 +928,7 @@ body {
     margin-left: -55px;
     margin-top: -29px;
 }
-.back 
+.back
 {
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
@@ -942,7 +942,7 @@ body {
     margin-top: 40px;
 }
 
-.back p 
+.back p
 {
     text-align: center;
     padding: 0 20px;
@@ -1112,15 +1112,15 @@ body {
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #969595;  
+   color: #969595;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #969595;  
+   color: #969595;
 }
 
-:-ms-input-placeholder {  
-   color: #969595;  
+:-ms-input-placeholder {
+   color: #969595;
 }
 
 
@@ -1163,7 +1163,7 @@ input#cfsubmit:hover {
     height: 250px;
 }
                     /*-------------
-                       11 ) Footer 
+                       11 ) Footer
                       -------------*/
 
 .footer {
