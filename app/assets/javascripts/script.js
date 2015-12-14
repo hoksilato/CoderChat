@@ -1,14 +1,3 @@
-
-/*  ------------------
-    Remove Preloader
-    ------------------  */
-
-$(window).load(function () {
-    $('#preloader').delay(350).fadeOut('slow', function () {
-        $('.profile-page, .portfolio-page, .service-page, .contact-page').hide();
-    });
-});
-
 $(document).ready(function () {
 
     'use strict';

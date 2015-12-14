@@ -1,83 +1,105 @@
+<!-- Preloader -->
+
+<div id="preloader">
+  <div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
 <div class="home-page">
 
-    <!-- Introduction -->
+  <!-- Introduction -->
 
-    <div class="introduction">
-        <!-- <div class="mask">
-        </div> -->
-        <div class="intro-content">
-            <!-- <h1>HELLO<br>
-            I'M <span>JOHN</span> DOE</h1> -->
-            <h1>
-                Hi, We are
-            </h1>
-            <span>joyChat</span><span class="number">3</span>
-            <p class="slogan-text text-capitalize">We bring JOY to Everyone</p>
+  <div class="introduction">
+      <!-- <div class="mask">
+      </div> -->
+      <div class="intro-content">
+          <!-- <h1>HELLO<br>
+          I'M <span>JOHN</span> DOE</h1> -->
+          <h1>
+              Hi, We are
+          </h1>
+          <span>joyChat</span><span class="number">3</span>
+          <p class="slogan-text text-capitalize">We bring JOY to Everyone</p>
 
-            <!-- <div class="social-media hidden-xs">
-                <a href="#" class="fa fa-facebook" data-toggle="tooltip" title="Facebook"></a>
-                <a href="#" class="fa fa-twitter" data-toggle="tooltip" title="Twitter"></a>
-                <a href="#" class="fa fa-plus" data-toggle="tooltip" title="Google+"></a>
-                <a href="#" class="fa fa-linkedin" data-toggle="tooltip" title="Linkedin"></a>
-                <a href="#" class="fa fa-behance" data-toggle="tooltip" title="Behance"></a>
-                <a href="#" class="fa fa-flickr" data-toggle="tooltip" title="Flicker"></a>
-                <a href="#" class="fa fa-instagram" data-toggle="tooltip" title="Instagram"></a>
-            </div> -->
-        </div>
+          <!-- <div class="social-media hidden-xs">
+              <a href="#" class="fa fa-facebook" data-toggle="tooltip" title="Facebook"></a>
+              <a href="#" class="fa fa-twitter" data-toggle="tooltip" title="Twitter"></a>
+              <a href="#" class="fa fa-plus" data-toggle="tooltip" title="Google+"></a>
+              <a href="#" class="fa fa-linkedin" data-toggle="tooltip" title="Linkedin"></a>
+              <a href="#" class="fa fa-behance" data-toggle="tooltip" title="Behance"></a>
+              <a href="#" class="fa fa-flickr" data-toggle="tooltip" title="Flicker"></a>
+              <a href="#" class="fa fa-instagram" data-toggle="tooltip" title="Instagram"></a>
+          </div> -->
+      </div>
 
-        <!-- Social Media Icons [ END ] -->
+      <!-- Social Media Icons [ END ] -->
+  </div>
+
+  <!-- Navigation Menu -->
+
+  <div class="menu">
+    <div class="profile-btn">
+      <%= image_tag 'about.jpg', style: 'width:100%; height:100%;' %>
+      <div class="mask">
+      </div>
+      <div class="heading">
+        <i class="ion-beer hidden-xs"></i>
+        <h2>Sign Up</h2>
+      </div>
     </div>
 
-    <!-- Navigation Menu -->
+    <!-- Single Navigation Menu Button -->
 
-    <div class="menu">
-        <div class="profile-btn">
-            <%= image_tag 'about.jpg', style: 'width:100%; height:100%;' %>
-            <div class="mask">
-            </div>
-            <div class="heading">
-                <i class="ion-beer hidden-xs"></i>
-                <h2>Sign Up</h2>
-            </div>
-        </div>
-
-        <!-- Single Navigation Menu Button -->
-
-        <div class="portfolio-btn">
-            <%= image_tag 'portfolio.jpg' %>
-            <div class="mask">
-            </div>
-            <div class="heading">
-                <i class="ion-log-in hidden-xs"></i>
-                <h2>Sign In</h2>
-            </div>
-        </div>
-
-        <!-- Single Navigation Menu Button [ END ]  -->
-
-        <div class="service-btn">
-            <%= image_tag 'service.jpg' %>
-            <div class="mask">
-            </div>
-            <div class="heading">
-                <i class="ion-ios-people-outline hidden-xs"></i>
-                <h2>People</h2>
-            </div>
-        </div>
-
-        <!-- Single Navigation Menu Button [ END ]  -->
-
-        <div class="contact-btn">
-            <%= image_tag 'contact.jpg' %>
-            <div class="mask">
-            </div>
-            <div class="heading">
-                <i class="ion-email hidden-xs"></i>
-                <h2>Messages</h2>
-            </div>
-        </div>
-
-        <!-- Single Navigation Menu Button [ END ]  -->
-
+    <div class="portfolio-btn">
+      <%= image_tag 'portfolio.jpg' %>
+      <div class="mask">
+      </div>
+      <div class="heading">
+        <i class="ion-log-in hidden-xs"></i>
+        <h2>Sign In</h2>
+      </div>
     </div>
+
+    <!-- Single Navigation Menu Button [ END ]  -->
+
+    <div class="service-btn">
+      <%= image_tag 'service.jpg' %>
+      <div class="mask">
+      </div>
+      <div class="heading">
+        <i class="ion-ios-people-outline hidden-xs"></i>
+        <h2>People</h2>
+      </div>
+    </div>
+
+    <!-- Single Navigation Menu Button [ END ]  -->
+
+    <div class="contact-btn">
+      <%= image_tag 'contact.jpg' %>
+      <div class="mask">
+      </div>
+      <div class="heading">
+        <i class="ion-email hidden-xs"></i>
+        <h2>Messages</h2>
+      </div>
+    </div>
+
+    <!-- Single Navigation Menu Button [ END ]  -->
+
+  </div>
 </div>
+<script type="text/javascript">
+/*  ------------------
+Remove Preloader
+------------------  */
+
+$(window).load(function () {
+    $('#preloader').delay(350).fadeOut('slow', function () {
+        // $('.profile-page, .portfolio-page, .service-page, .contact-page').hide();
+    });
+});
+</script>
