@@ -1,3 +1,96 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ul.messages-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+  display:table;
+  margin:0 auto;
+}
+
+ul.messages-nav li {
+  float: left;
+  padding: 2px;
+}
+
+ul.messages-nav li a {
+  text-align: center;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #00B796;
+  color: #00B796;
+  margin: 10px 0;
+  padding: 10px 25px;
+  -webkir-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  line-height: 46px;
+}
+
+ul.messages-nav li a.active {
+  background: #00B796;
+  color: #fff;
+}
+
+/* Change the link color to #111 (black) on hover */
+ul.messages-nav li a:hover {
+  background: #00B796;
+  color: #fff;
+}
+
+/* Bootstrap 4 Callout */
+
+.bd-callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #eee;
+    border-left-width: .25rem;
+    border-radius: .25rem
+}
+
+.bd-callout h4 {
+    margin-top: 0;
+    margin-bottom: .25rem
+}
+
+.bd-callout p:last-child {
+    margin-bottom: 0
+}
+
+.bd-callout code {
+    border-radius: .25rem
+}
+
+.bd-callout+.bd-callout {
+    margin-top: -.25rem
+}
+
+.bd-callout-info {
+    border-left-color: #5bc0de
+}
+
+.bd-callout-info h4 {
+    color: #5bc0de
+}
+
+.bd-callout-warning {
+    border-left-color: #f0ad4e
+}
+
+.bd-callout-warning h4 {
+    color: #f0ad4e
+}
+
+.bd-callout-danger {
+    border-left-color: #d9534f
+}
+
+.bd-callout-danger h4 {
+    color: #d9534f
+}

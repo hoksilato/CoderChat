@@ -1,0 +1,67 @@
+<div class="portfolio-page container-fluid">
+  <div class="row">
+    <!--( a ) Contact Page Fixed Image Portion -->
+
+    <div class="image-container col-md-3 col-sm-12">
+      <div class="mask">
+      </div>
+      <div class="main-heading">
+        <h1>messages</h1>
+      </div>
+    </div>
+
+    <!--( b ) Contact Page Content -->
+
+    <div class="content-container col-md-9 col-sm-12">
+
+      <%= render partial: "shared/flash", flash: flash %>
+
+      <div class="portfolio clearfix full-height">
+        <h2 class="small-heading">CREATE NEW MESSAGE</h2>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+                <div class="project-container">
+                    <div class="row">
+                        <div class="project-controls">
+                          <ul class="messages-nav">
+                            <li><%= link_to 'Incoming messages', messages_path %></li>
+                            <li><a href="">Sent messages</a></li>
+                            <li><%= link_to 'New message', new_message_path, class: 'active' %></li>
+                            <li><%= link_to 'Add friends', users_path %></li>
+                          </ul>
+                        </div>
+
+                        <!-- Portfolio Control Buttons [ END ] -->
+
+                        <div id="projects" class="projet-items clearfix">
+                          <%= simple_form_for @message, html: {class: 'contact-form"'} do |f| %>
+
+                            <div class="col-md-6 col-sm-6">
+                              <div class="form-group">
+                                <%= f.collection_select :recipient, current_user.friends, :id, :name, prompt: false, class: 'form-control' %>
+                              </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12">
+                              <%= f.input :body, label: false, placeholder: 'Your message', class: 'form-control', required: 'required', as: :text %>
+                            </div>
+
+                            <div class="col-md-4 col-xs-12">
+                              <%= f.submit 'Send', class: 'btn btn-send' %>
+                            </div>
+
+                          <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- ( D ) Footer -->
+
+      <%= render partial: "shared/footer" %>
+    </div>
+  </div>
+</div>

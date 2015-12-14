@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :users, only: [:new, :create, :index]
   resources :sessions, only: [:new, :create, :destroy]
-  resources :messages, only: [:index]
+  resources :messages, only: [:index, :new, :create]
+  resources :friends, only: [:index, :new, :create]
 
   get 'welcome/index'
   get 'register' => 'users#new'

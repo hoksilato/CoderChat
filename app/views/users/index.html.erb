@@ -1,2 +1,45 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<div class="service-page container-fluid">
+  <div class="row">
+    <!--( a ) Portfolio Page Fixed Image Portion -->
+
+    <div class="image-container col-md-3 col-sm-12">
+      <div class="mask">
+      </div>
+      <div class="main-heading">
+        <h1>People</h1>
+      </div>
+    </div>
+
+    <!--( b ) Portfolio Page Content -->
+
+    <div class="content-container col-md-9 col-sm-12">
+
+      <%= render partial: "shared/flash", flash: flash %>
+
+      <!--( A ) Portfolio -->
+
+      <div class="clearfix full-height">
+        <h2 class="small-heading">MAKE FRIENDS</h2>
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+            <div class="row">
+              <% User.all.each do |user| %>
+                <% if !current_user.friends.include?(user) && current_user != user %>
+                  <%= form_tag friends_path, method: "post", class: 'form-inline' do %>
+                    <input type="hidden" name="id" value="<%= user.id %>">
+                    <span><%= user.name.titleize %></span>
+                    <button type="submit" class="btn btn-link"><%= "Add friend" %></button>
+                  <% end %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+
+      <%= render partial: "shared/footer" %>
+    </div>
+  </div>
+</div>
