@@ -41,6 +41,7 @@ GEM
     autoprefixer-rails (6.1.2)
       execjs
       json
+    bcrypt (3.1.10-x86-mingw32)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -68,6 +69,9 @@ GEM
       railties (>= 3.2, < 5.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    httparty (0.13.7)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     ionicons-rails (2.0.0)
     jbuilder (2.3.2)
@@ -93,6 +97,7 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.3)
     multi_json (1.11.2)
+    multi_xml (0.5.5)
     nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
     nokogiri (1.6.7-x86-mingw32)
@@ -181,12 +186,14 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   better_errors
-  bootstrap (~> 4.0.0.alpha1)
+  bootstrap (~> 4.0.0.alpha2)
   byebug
   coffee-rails (~> 4.1.0)
   coffee-script-source (= 1.8.0)
   font-awesome-rails
+  httparty
   ionicons-rails
   jbuilder (~> 2.0)
   jquery-infinite-pages
