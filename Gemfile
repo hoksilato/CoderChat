@@ -51,7 +51,25 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Use CoffeeScript version 1.8.0 to fix error 'ExecJS::ProgramError in views' on Windows
+  gem 'coffee-script-source', '1.8.0'
 end
 
 gem 'rails_12factor', group: 'production'
 
+# Paginator
+gem 'kaminari'
+
+# jQuery Infinite Pages
+gem 'jquery-infinite-pages'
+
+# Font-Awesome
+gem "font-awesome-rails"
+
+# Ionicons
+gem 'ionicons-rails'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
