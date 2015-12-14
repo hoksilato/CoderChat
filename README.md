@@ -4,9 +4,9 @@
 
 Submitted by: **Cang Ta**
 
-Time spent: **X** hours
+Time spent: **16** hours
 
-URL: **enigmatic-basin-9048.herokuapp.com**
+URL: **https://enigmatic-basin-9048.herokuapp.com**
 
 ## User Stories
 
@@ -44,7 +44,6 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthrough](http://i.imgur.com/link/to/your/gif/file.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -54,7 +53,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2015 CoderChat
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
