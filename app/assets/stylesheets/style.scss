@@ -428,7 +428,7 @@ body {
                       ------------------*/
 
 .close-btn {
-    background: url(../img/close.png);
+    background: url(close.png);
     z-index: 1000;
     cursor: pointer;
     width: 40px;
@@ -516,7 +516,7 @@ body {
 /* ( a ) Story of Glory */
 
 .profile-page .image-container {
-    background: url(../img/about_us_featured.png);
+    background: url(about_us_featured.png);
     background-size: cover;
     background-position: bottom;
 }
@@ -532,7 +532,7 @@ body {
 }
 
 .facts {
-    /*background: url(../img/about_us_video.png);*/
+    /*background: url(about_us_video.png);*/
     /*background-attachment: fixed;*/
     margin-bottom: 20px;
 }
@@ -634,7 +634,7 @@ body {
 /* ( a ) Portfolio Section */
 
 .portfolio-page .image-container {
-    background: url(../img/portfolio_featured.png);
+    background: url(portfolio_featured.png);
     background-size: cover;
     background-position: bottom;
 }
@@ -830,7 +830,7 @@ body {
                     =======================================*/
 
 .service-page .image-container {
-    background: url(../img/service_featured.png);
+    background: url(service_featured.png);
     background-size: cover;
     background-position: bottom;
 }
@@ -1125,7 +1125,7 @@ body {
 
 
 .contact-page .image-container {
-    background: url(../img/contact_featured.png);
+    background: url(contact_featured.png);
     background-size: cover;
     background-position: bottom;
 }
@@ -1161,7 +1161,28 @@ input#cfsubmit:hover {
 #map-canvas {
     width: 100%;
     height: 250px;
+    color: #737373;
 }
+
+span.help-block {
+    font-style: italic;
+    font-size: 12px;
+}
+
+.has-error span.help-block {
+    color: #a94442;
+}
+
+.has-error label {
+    color: #a94442;
+}
+
+.has-error .form-control {
+    border-color: #a94442;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+}
+
                     /*-------------
                        11 ) Footer
                       -------------*/
@@ -1212,6 +1233,14 @@ input#cfsubmit:hover {
 
 .footer a:hover {
     color: #f4f4f4;
+}
+
+                    /*--------------------
+                       12 ) Customization
+                      --------------------*/
+
+.alert {
+    border-radius: 0;
 }
 
 /*=============================================
@@ -1280,7 +1309,7 @@ input#cfsubmit:hover {
     }
 
     .close-btn {
-        background: url(../img/close_sm.png);
+        background: url(close_sm.png);
     }
 
     .footer .copyright {
